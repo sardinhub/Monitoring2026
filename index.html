@@ -413,7 +413,7 @@ async function loadStaff(){
   const localExtra = JSON.parse(localStorage.getItem('akt-staff-extra')||'[]');
   let names = [...defaults, ...localExtra.filter(n=>!defaults.includes(n))];
 
-  if(API_URL !== 'GANTI_DENGAN_URL_APPS_SCRIPT_ANDA'){
+  if(API_URL !== 'https://script.google.com/macros/s/AKfycbzRCL1ZzoNKYp2BkEjUwwxrnmmwhmV6ooTl4fosBXqNycy9HeATWwy5fpBf5PugAUkF/exec'){
     try{
       const res = await fetch(`${API_URL}?action=staff`);
       const json = await res.json();
